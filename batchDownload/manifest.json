@@ -1,0 +1,33 @@
+{
+	"manifest_version": 2,
+
+	"name": "ImageBatchDownload",
+	"description": "batch download images from any website chrome extension",
+	"version": "1.0",
+
+	"page_action": {
+		"default_icon": "icon.png",
+		"default_popup": "popup.html",
+		"default_title": "Image Batch Download"
+	},
+
+	"background": {
+		"scripts": ["event_page.js"],
+		"persistent": false
+	},
+
+	"content_scripts":[
+		{
+			"matches": ["<all_urls>"],
+			"js": ["jquery-3.1.1.js", "batchDownload.js"],
+			"css": ["batchDownload.css"]
+		}
+	],
+
+	"permissions": [
+		"tabs",
+		"https://www.google.com/*",
+		"https://127.0.0.1/*",
+		"declarativeContent"
+	]
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title>Video snapshot</title>
+        <link rel="stylesheet" type="text/css" href="newTab.css"></link>
+        <script src="jquery-3.1.1.js" type="text/javascript"></script>
+        <script src="newTab.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <h1>Video Snapshot Download</h1>
+        <input type="radio" name="predictionServer" value="http://127.0.0.1:8000/" checked>localhost<br>
+        <input type="radio" name="predictionServer" value="http://192.168.1.6:8000/">linuxServer<br>
+        <label><input id="forceUpdateCheckbox" type="checkbox" />Force Update</label>
+        <input id="playBtn" type="submit" value="Play"></input>
+        <input id="pauseBtn" type="submit" value="Pause"></input>
+        <input id="snapBtn" type="submit" value="Snap"></input>
+        <span id="predictionSpan"></span>
+        <div id="videoDiv">
+            <video id="video" name="media" controls crossOrigin="anonymous">
+                <source crossOrigin="anonymous" id="videoSource" />
+            </video>
+            <canvas id="canvas"></canvas>
+        </div>
+        <img id="image"></img>
+    </body>
+</html>
+

@@ -1,0 +1,10 @@
+div.imgControl {
+    float: left;
+    margin-left: 10px;
+}
+
+input.btnDownload {
+    position: relative;
+    display: block;
+}
+
